@@ -1,0 +1,87 @@
+<div id="modalScadenze" class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document" style="max-width: 800px">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title">Dettagli mezzo</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+	
+          
+
+		  
+		  <h4 id="formViewMezzo_Matricola"></h4>
+		  <p><a id ="mezzoFolderLink" target="_blank" href=""><span class="icon-holder">Consulta il fascicolo del mezzo  <i class="large ti-folder c-blue-700"></i></span></a></p>
+		  
+
+          <br/>
+
+		  <nav>
+			<div class="nav nav-tabs" id="nav-tab" role="tablist">
+			  <a class="nav-item nav-link active" id="nav-sca-tab" data-toggle="tab" href="#nav-sca" role="tab" aria-controls="nav-sca" aria-selected="true">Scadenze o avvertenze</a>
+			  <a class="nav-item nav-link" id="nav-man-tab" data-toggle="tab" href="#nav-man" role="tab" aria-controls="nav-man" aria-selected="false">Manutenzioni previste</a>
+			  <a class="nav-item nav-link" id="nav-seg-tab" data-toggle="tab" href="#nav-seg" role="tab" aria-controls="nav-seg" aria-selected="false">Segnalazioni aperte</a>
+			</div>
+		  </nav>
+		  <div class="tab-content" id="nav-tabContent">
+			<div class="tab-pane fade show active" id="nav-sca" role="tabpanel" aria-labelledby="nav-sca-tab">
+				<br/>
+				<table class="table table-striped table-bordered" id="tableScadenze">
+					<thead>
+						<tr>
+							<th width="20%">Severità</th>
+							<th>Dettaglio</th>
+						</tr>
+					</thead>
+					<tbody>
+		
+					</tbody>
+				</table>
+			</div>
+			<div class="tab-pane fade" id="nav-man" role="tabpanel" aria-labelledby="nav-man-tab">
+				<br/>
+				<table class="table table-striped table-bordered" id="tableManutenzioniPreviste">
+					<thead>
+						<tr>
+							<th>Codice</th>
+							<!-- <th>Descrizione</th> -->
+							<th>Periodicità km</th>
+							<th>Tolleranza km</th>
+							<th>Periodicità ore (eff)</th>
+							<th>Tolleranza ore (eff)</th>
+							<th>Periodicità ore (sol)</th>
+							<th>Tolleranza ore (sol)</th>
+						</tr>
+					</thead>
+					<tbody>
+		
+					</tbody>
+				</table>
+			</div>
+			<div class="tab-pane fade" id="nav-seg" role="tabpanel" aria-labelledby="nav-seg-tab">
+				<br/>
+				<table class="table table-striped table-bordered" id="tableSegnalazioniAperte">
+					<thead>
+						<tr>
+							<th>Tipo Segnalazione</th>
+							<th>Data</th>
+							<th>Km</th>
+						</tr>
+					</thead>
+					<tbody>
+		
+					</tbody>
+				</table>
+			</div>
+		  </div>
+
+	
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+		</div>
+	  </div>
+	</div>
+  </div>

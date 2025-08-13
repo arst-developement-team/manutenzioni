@@ -1,0 +1,76 @@
+<script>
+  const currentPage = "<%= page %>";
+  const loggedUserRoles = "<%= user.ruoli %>".split(","); //ES,ADMIN
+  const loggedUserDomains = "<%= user.sedi %>".split(","); 
+  const hasRole = function(role){
+    if (role == null || role == ""){
+      return true;
+    }
+    if (role.indexOf(',') > -1){
+      let roles = role.split(',');
+      for(let i = 0; i < roles.length; i++){
+        let iRole = roles[i];
+        if (loggedUserRoles.includes(iRole)){
+          return true;
+        }
+      }
+      return loggedUserRoles.includes('ADMIN') || loggedUserRoles.includes('FSM');
+    }
+    return loggedUserRoles.includes(role) || loggedUserRoles.includes('ADMIN') || loggedUserRoles.includes('FSM');
+  }
+</script>
+<div class="sidebar">
+  <div class="sidebar-inner">
+    <div class="sidebar-logo">
+      <div class="peers ai-c fxw-nw">
+        <div class="peer peer-greed"><a class="sidebar-link td-n" href="/">
+            <div class="peers ai-c fxw-nw">
+              <div class="peer">
+                <div class="logo"><img src="assets/static/images/logo.png" alt=""></div>
+              </div>
+              <div class="peer peer-greed">
+                <h5 class="lh-1 mB-0 logo-text" style="text-align:left; color: #72777a; padding-left: 10px;"><strong>G</strong>estione <strong><br/>M</strong>anutenzione <strong><br/>R</strong>otabili</h5>
+              </div>
+            </div>
+          </a></div>
+        <div class="peer">
+          <div class="mobile-toggle sidebar-toggle"><a href="" class="td-n"><i class="ti-arrow-circle-left"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="sidebar-menu scrollable pos-r">
+      <li class="nav-item mT-30 active"><a class="sidebar-link" href="/mezzi"><span class="icon-holder"><i
+              class="c-blue-500 fa fa-train"></i> </span><span class="title">Mezzi</span></a></li>
+
+     
+
+      <li class="nav-item mT-30 active"><a class="sidebar-link" href="/manutenzioni"><span class="icon-holder"><i
+              class="c-blue-500 fa fa-wrench"></i> </span><span class="title">Manutenzioni</span></a></li>
+
+      <script>
+        (hasRole('FEM,FGMF')?document.write(
+        `
+        <li class="nav-item mT-30 active"><a class="sidebar-link" href="/interventimanutenzione"><span class="icon-holder"><i
+              class="c-blue-500 fa fa-list-ul"></i> </span><span class="title">Prontuario interventi</span></a></li>
+        `
+        ):"")
+      </script>
+
+      <!--
+      <li class="nav-item mT-30 active"><a class="sidebar-link" href="/interventimanutenzione"><span class="icon-holder"><i
+              class="c-blue-500 fa fa-list-ul"></i> </span><span class="title">Prontuario interventi</span></a></li>
+      -->
+
+      <li class="nav-item mT-30 active"><a class="sidebar-link" href="/segnalazioni"><span class="icon-holder"><i
+              class="c-blue-500 fa fa-exclamation"></i> </span><span class="title">Segnalazioni</span></a></li>
+
+      <li class="nav-item mT-30 active"><a class="sidebar-link" href="/comunicazioni"><span class="icon-holder"><i
+              class="c-blue-500 fa fa-envelope-o"></i> </span><span class="title">Comunicazioni</span></a></li>
+
+      <li class="nav-item mT-30 active"><a id="help" class="sidebar-link" href="javascript:void(0);"><span class="icon-holder"><i
+              class="c-blue-500 fa fa-question-circle"></i> </span><span class="title">Tutorial</span></a></li>
+        
+    </ul>
+  </div>
+</div>

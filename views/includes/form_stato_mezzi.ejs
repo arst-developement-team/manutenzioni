@@ -1,0 +1,53 @@
+<div id="modalStatoMezzo" class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title">Aggiorna stato</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+
+		  <div style="color:red; display:none; margin-bottom: 10px;" id="formStatoMezzo_ValidationMessage"></div>
+	
+          <h4 id="formStatoMezzo_Matricola"></h4>
+		  
+          <form>
+            <input id="formStatoMezzo_IdMezzo" type="hidden" />
+			
+			<div class="form-group">
+				<label for="formStatoMezzo_IdStato">Stato *</label> 
+				<select id="formStatoMezzo_IdStato" class="form-control">
+					<option>Seleziona</option>
+			  	</select>
+			</div>
+		
+			<div class="form-row">
+				<div class="form-group col-md-12"><label>Data *</label>
+				  <div class="timepicker-input input-icon form-group">
+					<div class="input-group">
+					  <div class="input-group-addon bgc-white bd bdwR-0"><i class="ti-calendar"></i></div>
+					  <input type="text" class="form-control bdc-grey-200 start-date" data-provide="datepicker" id="formStatoMezzo_Data">
+					</div>
+				  </div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="formStatoMezzo_Note">Note</label> 
+				<textarea id="formStatoMezzo_Note" class="form-control"></textarea>
+			</div>
+			
+			
+		</form>
+
+
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
+		  <button type="button" class="btn btn-primary" id="formStatoMezzo_aggiorna">Aggiorna</button>
+		</div>
+	  </div>
+	</div>
+  </div>

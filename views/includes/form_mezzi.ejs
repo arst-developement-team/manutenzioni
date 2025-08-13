@@ -1,0 +1,59 @@
+<div id="modalMezzo" class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title">Aggiorna dati</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+	
+		  <div style="color:red; display:none; margin-bottom: 10px;" id="formMezzo_ValidationMessage"></div>
+
+          <h4 id="formMezzo_Matricola"></h4>
+
+		  
+		  
+          <form>
+            <input id="formMezzo_IdMezzo" type="hidden" />
+			<!--
+			<div class="checkbox checkbox-circle checkbox-info peers ai-c mB-15">
+				<input type="checkbox" id="inputCall1" name="inputCheckboxesCall" class="peer"> 
+				<label for="inputCall1" class="peers peer-greed js-sb ai-c">
+				<span class="peer peer-greed">Call John for Dinner</span>
+				</label>
+			</div>
+			-->
+		
+			<div class="form-row">
+				<div class="form-group col-md-12"><label>Data *</label>
+				  <div class="timepicker-input input-icon form-group">
+					<div class="input-group">
+					  <div class="input-group-addon bgc-white bd bdwR-0"><i class="ti-calendar"></i></div>
+					  <input type="text" class="form-control bdc-grey-200 start-date" data-provide="datepicker" id="formMezzo_Data">
+					</div>
+				  </div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="formMezzo_ContaKm">Conta Km *</label> 
+				<input type="number" class="form-control" id="formMezzo_ContaKm">
+				<!-- <small id="formMezzo_ContaKm_Error" class="form-text text-muted">Inserire un numero positivo</small> -->
+			</div>
+			<div class="form-group">
+				<label for="formMezzo_KmVita">Km vita *</label> 
+				<input type="number" class="form-control" id="formMezzo_KmVita">
+			</div>
+			
+		</form>
+
+
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
+		  <button type="button" class="btn btn-primary" id="formMezzo_aggiorna">Aggiorna</button>
+		</div>
+	  </div>
+	</div>
+  </div>

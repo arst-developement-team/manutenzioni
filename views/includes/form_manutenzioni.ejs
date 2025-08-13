@@ -1,0 +1,84 @@
+<div id="modalManutenzione" class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title">Nuova/Modifica manutenzione</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+
+		  <div style="color:red; display:none; margin-bottom: 10px;" id="formManutenzioni_ValidationMessage"></div>
+	
+          <h4 id="formManutenzioni_Matricola"></h4>
+		  
+          <form>
+			<fieldset> <!-- disabled="disabled" -->
+            <input id="formManutenzioni_IdManutenzione" type="hidden" />
+			<!--
+			<div class="checkbox checkbox-circle checkbox-info peers ai-c mB-15">
+				<input type="checkbox" id="inputCall1" name="inputCheckboxesCall" class="peer"> 
+				<label for="inputCall1" class="peers peer-greed js-sb ai-c">
+				<span class="peer peer-greed">Call John for Dinner</span>
+				</label>
+			</div>
+			-->
+		
+			<div id="div_FormManutenzioni_IdMezzo" class="form-group">
+				<label for="formManutenzioni_IdMezzo">Mezzo *</label> 
+				<select id="formManutenzioni_IdMezzo" class="form-control">
+					<option>Seleziona</option>
+			  	</select>
+				<input type="hidden" id="formManutenzioni_IdMezzo_h"/>
+			</div>
+			<div class="form-group">
+				<label for="formManutenzioni_IdTipoManutenzione">Tipo manutenzione *</label> 
+				<select id="formManutenzioni_IdTipoManutenzione" class="form-control">
+					<option>Seleziona</option>
+			  	</select>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-12"><label>Data *</label>
+				  <div class="timepicker-input input-icon form-group">
+					<div class="input-group">
+					  <div class="input-group-addon bgc-white bd bdwR-0"><i class="ti-calendar"></i></div>
+					  <input type="text" class="form-control bdc-grey-200 start-date" data-provide="datepicker" id="formManutenzioni_Data"><!--input disabled-->
+					</div>
+				  </div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="formManutenzioni_Km">Conta Km *</label> 
+				<input type="number" class="form-control" id="formManutenzioni_Km">
+			</div>
+			<div class="form-group">
+				<label for="formManutenzioni_Note">Note</label> 
+				<textarea id="formManutenzioni_Note" class="form-control"></textarea>
+			</div>
+			<div style="display:none">
+			<div class="checkbox checkbox-circle checkbox-info peers ai-c mB-15">
+				<input type="checkbox" id="formManutenzioni_Correttiva" name="formManutenzioni_Correttiva" class="peer"> 
+				<label for="formManutenzioni_Correttiva" class="peers peer-greed js-sb ai-c">
+				<span class="peer peer-greed">Correttiva</span>
+				</label>
+			</div>
+		    </div>
+			<div class="form-group" id="div_FormManutenzioni_Correttiva">
+				<label for="formManutenzioni_IdSegnalazione">Segnalazione da chiudere</label> 
+				<select id="formManutenzioni_IdSegnalazione" class="form-control">
+					<option value="">Seleziona</option>
+			  	</select>
+			</div>
+		</fieldset>
+		</form>
+
+
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
+		  <button type="button" class="btn btn-primary" id="formManutenzioni_Salva">Salva</button>
+		</div>
+	  </div>
+	</div>
+  </div>

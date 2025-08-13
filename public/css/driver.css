@@ -1,0 +1,56 @@
+#driver-popover-item{
+    min-width:350px !important;
+    max-width:600px !important;
+}
+.driver-popover-title{
+    all: unset !important;
+    display: block !important;
+    position: relative !important;
+    margin: 0 0 5px !important;
+    font-weight: 700 !important;
+}
+.driver-popover-description{
+    all: unset !important;
+    margin-bottom: 0 !important;
+}
+.driver-close-btn, .driver-prev-btn, .driver-next-btn{
+    font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif!important;
+    display: inline-block !important;
+    font-weight: 400 !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    vertical-align: middle !important;
+    cursor: pointer !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    user-select: none !important;
+    border: 1px solid #28378A !important;
+    padding: .375rem .75rem !important;
+    border-radius: .25rem !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+    background-color: #28378A !important;
+    color: #fff !important;
+    text-shadow: none!important;
+    /*font-size: 1rem !important;*/
+    /*border-color: #28378A !important;*/
+    /*line-height: 1.5 !important;*/
+    font-size: 14px!important;
+    line-height: 21px!important;
+    border: 1px solid transparent!important;
+}
+.driver-disabled{
+    color: #fff!important;
+    background-color: #6c757d!important;
+    border-color: #6c757d!important;
+}
+.driver-next-btn:hover, .driver-next-btn:focus, .driver-next-btn:active, .driver-next-btn:visited,
+.driver-prev-btn:hover, .driver-prev-btn:focus, .driver-prev-btn:active, .driver-prev-btn:visited,
+.driver-close-btn:hover, .driver-close-btn:focus, .driver-close-btn:active, .driver-close-btn:visited	{
+    border-color: #fff!important;
+}
+.driver-next-btn:focus, .driver-next-btn.active:focus, .driver-next-btn:active:focus,
+.driver-prev-btn:focus, .driver-prev-btn.active:focus, .driver-prev-btn:active:focus,
+.driver-close-btn:focus, .driver-close-btn.active:focus, .driver-close-btn:active:focus	{
+    border-color: rgba(40, 55, 138, 0.5)!important; 
+    box-shadow: 0 0 0 0.25rem rgba(40, 55, 138, 0.5)!important; 
+}

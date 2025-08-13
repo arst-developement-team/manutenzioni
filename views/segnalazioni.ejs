@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <title>Segnalazioni</title>
+  <style>
+    #loader {
+      transition: all .3s ease-in-out;
+      opacity: 1;
+      visibility: visible;
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      background: #fff;
+      z-index: 90000
+    }
+
+    #loader.fadeOut {
+      opacity: 0;
+      visibility: hidden
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: calc(50% - 20px);
+      left: calc(50% - 20px);
+      background-color: #333;
+      border-radius: 100%;
+      -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+      animation: sk-scaleout 1s infinite ease-in-out
+    }
+
+    @-webkit-keyframes sk-scaleout {
+      0% {
+        -webkit-transform: scale(0)
+      }
+
+      100% {
+        -webkit-transform: scale(1);
+        opacity: 0
+      }
+    }
+
+    @keyframes sk-scaleout {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+      }
+
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="./css/style.css">
+  <!--guida-->
+  <link rel="stylesheet" href="./css/driver.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/driver.js/0.9.8/driver.min.css" integrity="sha512-yQuTmOu0Rm68Udrrd2uqDvHc/xzvQxJoNzYgLn7SK+EpPuEKZu82S44D2G++HLiz6lhUShgJPOri7zvRTVtyZQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+</head>
+
+<body class="app">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <script>window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      setTimeout(() => {
+        loader.classList.add('fadeOut');
+      }, 300);
+    });</script>
+  <div>
+
+    
+
+  <%- include('includes/sidebar') %>
+	
+	
+	<div class="page-container">
+	
+	  <%- include('includes/header_navbar') %>
+
+      <main class="main-content bgc-grey-100">
+        <div id="mainContent">
+
+          <%- include('includes/form_segnalazioni') %>
+          <%- include('includes/confirm') %>
+          <%- include('includes/confirm_chiudi') %>
+
+          <div class="container-fluid">
+            <h4 class="c-grey-900 mT-10 mB-30">Segnalazioni</h4>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="bgc-white bd bdrs-3 p-20 mB-20">
+                  <h4 class="c-grey-900 mB-20">Elenco segnalazioni</h4>
+                  <table id="tableSegnalazioni" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                      <tr>
+                        <th>Matricola</th>
+                        <th>Modello costruttore</th>
+                        <th>Deposito</th>
+                        <th>Tipo</th>
+                        <th>Data</th>
+                        <th>Stato</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 text-right">
+                <script>
+                  (hasRole('ES')?document.write('<button id="tableSegnalazioni_Add" type="button" class="btn btn-primary">Aggiungi segnalazione</button>'):"")
+                </script>
+                
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </main>
+	  <%- include('includes/footer') %>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/driver.js/0.9.8/driver.min.js" integrity="sha512-TMCPpR1wPPr92/7kiF88j9uTWczLpHyUTzt8sScGyN2btq/xWN22GjsdgNfUIMDtXV5WXUZ4s2OThcgpVxQv4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="./js/vendor.js"></script>
+  <script type="text/javascript" src="./js/bundle.js"></script>
+</body>
+
+</html>

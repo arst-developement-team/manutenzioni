@@ -1,0 +1,62 @@
+<div id="modalSegnalazione" class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title">Nuova/Modifica segnalazione</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+
+		  <div style="color:red; display:none; margin-bottom: 10px;" id="formSegnalazioni_ValidationMessage"></div>
+	
+          <h4 id="formSegnalazioni_Matricola"></h4>
+		  
+          <form>
+			<fieldset>
+            <input id="formSegnalazioni_IdSegnalazione" type="hidden" />
+
+			<div id="div_FormSegnalazioni_IdMezzo" class="form-group">
+				<label for="formSegnalazioni_IdMezzo">Mezzo *</label> 
+				<select id="formSegnalazioni_IdMezzo" class="form-control">
+					<option>Seleziona</option>
+			  	</select>
+				<input type="hidden" id="formSegnalazioni_IdMezzo_h"/>
+			</div>
+			<div class="form-group">
+				<label for="formSegnalazioni_IdTipoSegnalazione">Tipo segnalazione *</label> 
+				<select id="formSegnalazioni_IdTipoSegnalazione" class="form-control">
+					<option>Seleziona</option>
+			  	</select>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-12"><label>Data *</label>
+				  <div class="timepicker-input input-icon form-group">
+					<div class="input-group">
+					  <div class="input-group-addon bgc-white bd bdwR-0"><i class="ti-calendar"></i></div>
+					  <input disabled type="text" class="form-control bdc-grey-200 start-date" data-provide="datepicker" id="formSegnalazioni_Data">
+					</div>
+				  </div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="formSegnalazioni_Km">Conta Km *</label> 
+				<input type="number" class="form-control" id="formSegnalazioni_Km">
+			</div>
+			<div class="form-group">
+				<label for="formSegnalazioni_Note">Note</label> 
+				<textarea id="formSegnalazioni_Note" class="form-control"></textarea>
+			</div>
+			</fieldset>
+		</form>
+
+
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
+		  <button type="button" class="btn btn-primary" id="formSegnalazioni_Salva">Salva</button>
+		</div>
+	  </div>
+	</div>
+  </div>
